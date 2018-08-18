@@ -1,0 +1,71 @@
+{>"layout-slide"/}
+
+{<body}
+	<section>
+		<h1>JavaScript</h1>
+		<h2>Events</h2>
+	</section>
+
+	<section>
+		<p>An event is primarily a user triggered interaction with the browser. Secondarily, a browser initiated event (i.e. load). The most common examples are click, load, keyboard, and mouses events.  Touch events are more complex to code as to support gestures.</p>
+	</section>
+
+	<section>
+		<h2>Load</h2>
+		<p>After all the HTML is loaded then the onLoad event is triggered.</p>
+	</section>
+
+	<section>
+		<h2>Click</h2>
+		<p>Click includes both the mouse (trackball), and touch interactions (press). Click may be attached to any HTML element.</p>
+	</section>
+
+	<section>
+		<h2>Focus/Blur</h2>
+		<p>Focus is when the user actively interacts with a form field.  Blur is the opposite of focus -- not active.</p>
+	</section>
+
+	<section>
+		<h2>Submit</h2>
+		<p>A form has been submitted when a submit button is pressed or the enter key is executed from a form field.</p>
+	</section>
+
+	<section>
+		<h2>Mouse events</h2>
+		<ul>
+			<li>MouseOver</li>
+			<li>MouseOut</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Keyboard events</h2>
+		<ul>
+			<li>KeyPress</li>
+			<li>KeyDown</li>
+			<li>KeyUp</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Traditional event binding</h2>
+		<pre><code contenteditable>function pageLoad() {
+		window.alert('onload');
+};
+// avoid &lt;body onload="pageLoad();"&gt;
+window.onload = function () {
+		pageLoad();
+};</code></pre>
+	</section>
+
+	<section>
+		<h2>jQuery event binding</h2>
+		<pre><code contenteditable>function pageLoad() {
+		window.alert('onload');
+};
+// Run a function when the page is fully loaded including graphics.
+$( window ).load(function() {
+		pageLoad();
+});</code></pre>
+	</section>
+{/body}

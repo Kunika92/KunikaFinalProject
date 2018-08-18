@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Array</title>
+</head>
+
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>Array</h2>
+	
+	<h3>Goal</h3>
+	<p>Store a list of values as collection</p>
+	
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+	
+	<h3>Live demo</h3>
+	<script>
+		var fruit = []; // square bracket recommended syntax for creating an array
+		var third = 'Durian';
+		fruit[0] = 'Apple';
+		fruit[1] = 'Banana';
+		fruit[2] = 'Cherry';
+		fruit[3] = third;
+		fruit[4] = { // curly brace for object
+			fruitName: 'Eggplant' // key value pair
+		};
+		fruit[5] = [1, 2, 3];
+		// undefined fills the un-declared indexes
+		fruit[200] = 'Z';
+
+		window.alert(fruit);
+	</script>
+</body>
+</html>

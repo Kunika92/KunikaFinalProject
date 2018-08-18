@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form</title>
+	<style>
+		.required { background: red; }
+		.hide { display: none; }
+		.highlight { border: 2px solid green; }
+	</style>
+</head>
+
+<body>
+<h1>jQuery</h1>
+<h2>Form Validation</h2>
+
+<h3>Goal</h3>
+<ol>
+	<li>Prevent a user from submitting using client-side code.</li>
+	<li>As a developer, prevent the form action when at least one field is blank</li>
+	<li>As a user, I want to see an instruction message when the input field is blank</li>
+	<li>As a user, I want the submit button to shake when form is invalid</li>
+	<li>As a user, when form is invalid, I want the first blank field to be in focus</li>
+	<li>As a user, I want to see a colour change of the in focus field outline</li>
+</ol>
+
+<h3>Technologies</h3>
+<ol>
+	<li>jQuery</li>
+	<li>JavaScript</li>
+	<li>CSS</li>
+	<li>HTML</li>
+</ol>
+
+<h3>Live demo</h3>
+<form action="http://www.vanarts.com/" id="contact-form">
+	<div class="required">
+		<label>
+			Email <input type="text" id="email">
+			<i class="hide">sample@domain.ca</i>
+		</label>
+	</div>
+	<div>
+		<label>
+			Location <input type="text" id="location">
+			<i class="hide">Postal code/Zip code</i>
+		</label>
+	</div>
+	<div>
+		<label>
+			Phone <input type="text" id="phone">
+			<i class="hide">Mobile telephone number</i>
+		</label>
+	</div>
+
+	<input type="submit" value="Are my fields valid?">
+</form>
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Page specific code -->
+<script>
+	// num shakes, num pixel distance movement, num ms duration
+	// http://stackoverflow.com/questions/4399005/implementing-jquerys-shake-effect-with-animate
+	jQuery.fn.shake = function(intShakes, intDistance, intDuration) {
+		this.each(function() {
+			$(this).css("position","relative");
+			for (var x=1; x<=intShakes; x++) {
+				$(this).animate({left:(intDistance*-1)}, (((intDuration/intShakes)/4)))
+					.animate({left:intDistance}, ((intDuration/intShakes)/2))
+					.animate({left:0}, (((intDuration/intShakes)/4)));
+			}
+		});
+
+		return this;
+	};
+	/*
+		a) Delete or change the form action to blank
+		1) preventDefault
+		2) Test is form valid? (i.e. regular expression)
+	*/
+	function validateForm($form) {
+		/*
+			Determine if form is valid?
+			
+			a) find all input fields and check if value attribute is blank
+			1) find all instruction messages and check if missing hide class
+		*/
+		var isValid = ($form.find('i.hide').length === 0);
+		if (!isValid) {
+			// focus first blank field
+			$form
+				.find('i.hide:first')
+				.prev()
+				.focus()
+				.addClass('highlight');
+
+			$('input[type=submit]').shake(2, 5, 400);
+		}
+
+		return isValid;
+	}
+
+	function cancelForm(options) {
+		if (options.event) {
+			options.event.preventDefault(); // step #1
+		}
+	}
+
+	function applyInsturctionListener() {
+		/*
+			listen to keyboard event on the input element
+			then remove CSS class name hide from i element
+	
+			jQuery pattern
+			$(selector).method();
+		*/
+		$('input[type=text]').keyup(function() {
+			var $input = $(this);
+			var $i = $input.next();
+
+			if ($input.val() === '') {
+				$i.addClass('hide');
+			} else {
+				$i.removeClass('hide');
+			}
+		});
+	}
+
+	$('form').submit(function(event) {
+		// remove all highlight CSS classes
+		$(this).find('.highlight').removeClass('highlight');
+
+		var isFormValid = validateForm($(this));
+		console.log('Form submitted');
+
+		if (!isFormValid) {
+			cancelForm({ event: event });
+		}
+	});
+
+	applyInsturctionListener();
+</script>
+</body>
+</html>

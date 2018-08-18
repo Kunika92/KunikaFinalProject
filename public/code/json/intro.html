@@ -1,0 +1,30 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>intro.html</title>
+</head>
+<body> 
+	<h1>JSON</h1>
+	<h2>JavaScript Object Notation</h2>
+	<p>This is not a new language, but a special syntax of JavaScript.  JSON is a structure of properties without JavaScript functions.</p>
+	
+	<h3>Live demo</h3>
+	<script>
+			var movie = {}; // new object
+			// key value pairs
+			movie = { "horror": "Friday the 13th" }; // JSON doesn't use equal (=)  but colon (:)
+			console.log(movie);
+			
+			console.log(movie.horror); // dot syntax
+			
+			console.log(movie["horror"]); // named array
+			
+			movie.comedy = ["Film", "Motion Picture"]; // a JSON variable (movie), with a property (comedy).  The comedy property has an array value
+			
+			console.log(movie);
+			
+			// todo inclass: reference the movie variable and output the "Film" value
+	</script>
+</body></html>

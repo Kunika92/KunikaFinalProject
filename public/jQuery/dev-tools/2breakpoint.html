@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Breakpoint</title>
+</head>
+
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>Debugging code</h2>
+
+	<h3>Goal</h3>
+	<p>Breakpoint will pause the JavaScript rendering to be inspected allowing the developer to step through the code.</p>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<script>
+		var day = 'Wednesday';
+		day = 'Not Wed';
+		debugger; // programmatically set a breakpoint
+		day = 'Third change';
+		day = 'Fourth change';
+		console.log(day); // todo inclass: output "Hello World" by using a breakpoint and console to overwrite this variable without editing code
+	</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+{>"layout-slide"/}
+
+	{<body}
+<section>
+					<h1>Twitter</h1>
+					<h3>Micro blogging tool</h3>
+				</section>
+
+				<section>
+					<section>
+						<h2>Social plugin</h2>
+						<p>Limited customization, easiest to install</p>
+					</section>
+
+					<section>
+						<h2>Twitter Button</h2>
+						<p><a href="https://dev.twitter.com/web/tweet-button">Twitter</a></p>
+					</section>
+
+					<section>
+						<h2>Twitter Widgets</h2>
+						<p><a href="https://twitter.com/settings/widgets">Twitter</a></p>
+					</section>
+				</section>
+
+				<section>
+                	<section>
+                        <h2>JavaScript API</h2>
+                        <p>Very flexible, difficult to authenticate</p>
+                    </section>
+
+					<section>
+						<h2>REST API</h2>
+						<p><a href="https://dev.twitter.com/rest/public">JavaScript REST API</a></p>
+					</section>
+				</section>
+
+                <section>
+                	<section>
+                    	<h2>API Key</h2>
+                        <a href="https://dev.twitter.com/apps">Developers login</a>
+                    </section>
+
+                    <section>
+                    	<h2>Client Libraries</h2>
+                        <h3>OAuth</h3>
+                        <ul>
+	                        <li><a href="https://dev.twitter.com/docs/twitter-libraries">Twitter Libraries</a></li>
+                            <li><a href="https://github.com/ttezel/twit">Node.js client library</a></li>
+	                        <li><a href="https://dev.twitter.com/docs/auth/oauth/single-user-with-examples#php">PHP Example</a></li>
+                        </ul>
+                    </section>
+               </section>
+
+				<section>
+					<h2>AJAX code</h2>
+					<pre><code contenteditable>$.ajax({
+	"url": twitter.endpoint,
+	"data": twitter.parameters,
+	"dataType": 'jsonp',
+	"error": twitter.onError,
+	"success": twitter.onSuccess
+});</code></pre>
+				</section>
+
+				<section>
+					<h2>Format Twitter Date</h2>
+					<pre><code contenteditable>// input 'created_at' Twitter stamp Tue Apr 07 22:52:51 +0000 2009
+// output date/time relative to now
+var formatTwitterDate = function (stamp) {
+	var date = new Date(stamp),
+		secDiff = (((new Date()).getTime() - date.getTime()) / 1000),
+		dayDiff = Math.floor(secDiff / 86400);
+
+	if ( isNaN(dayDiff) || dayDiff < 0 ) {
+		return;
+	}
+
+	var lessThanDay = (
+		(secDiff < 60 && "just now") ||
+		(secDiff < 120 && "1 minute ago") ||
+		(secDiff < 3600 && Math.floor( secDiff / 60 ).toString() + " minutes ago") ||
+		(secDiff < 7200 && "1 hour ago") ||
+		(secDiff < 86400 && Math.floor( secDiff / 3600 ).toString() + " hours ago")
+	);
+
+	return (dayDiff === 0 && lessThanDay) ||
+		(dayDiff === 1 && "Yesterday") ||
+		(dayDiff < 7 && dayDiff.toString() + " days ago") ||
+		(dayDiff < 31 && Math.ceil( dayDiff / 7 ).toString() + " weeks ago"); // WARNING only 1 month supported
+};</code></pre>
+				</section>
+	{/body}

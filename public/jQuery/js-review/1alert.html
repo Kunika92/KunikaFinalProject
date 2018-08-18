@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>alert.html</title>
+	<script>
+		// Never store JavaScript in the head element
+		window.alert('Hello from head');
+	</script>
+</head>
+
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>Alert</h2>
+
+	<h3>Goal</h3>
+	<p>Notice the different of placing the script tag in the head and the body.</p>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<script>
+		alert('Hello from body'); // don't use, it's ugly and blocks the page
+		// quicker response time, no delay of JavaScript execution
+		// doesn't block page from rendering
+		// HTML already exists
+		// document.write is cause the browser to recalculate the HTML/CSS and delay the page
+	</script>
+</body>
+</html>

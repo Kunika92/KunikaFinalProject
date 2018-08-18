@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Get Local RSS</title>
+</head>
+
+<body>
+	<h1>AJAX</h1>
+	<h2>XML (hosted locally)</h2>
+	
+	<h3>Goal</h3>
+	<p>As a user, I want to see the RSS content provider's name (title element in the top of the channel)</p>
+
+	<h3>Dev Steps</h3>
+	<ol>
+		<li>Visit the CBC website to find the RSS resource</li>
+		<li>Download and serve the RSS resource on this local web server</li>
+		<li>Use jQuery to make an XHR request (AJAX) and display the response in the console</li>
+		<li>Parse title element from RSS</li>
+	</ol>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>RSS</li>
+		<li>XML</li>
+		<li>jQuery AJAX</li>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+		<li>HTML</li>
+	</ul>
+	
+	<h3>Live demo</h3>
+	<!-- Attach jQuery library -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Attach all the bundles JavaScript files in /src/js -->
+	<script src="/js/critical.js"></script>
+	<!-- Execute page specific function -->
+	<script>getLocalRss();</script>
+</body>
+</html>

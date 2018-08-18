@@ -1,0 +1,112 @@
+{>"layout-slide"/}
+
+	{<body}
+<section>
+<h1>QR codes</h1>
+<h3>Quick Response codes</h3>
+<img src="../assets/qrcode_cant_scan_this.jpg">
+<p><small>Can't <s>touch</s> scan this <small>(source <a class="wiki_link_ext" href="http://blog.bjvicks.com/post/4217416627/cant-scan-this" rel="nofollow">bjvicks</a>)</small></small></p>
+</section>
+
+<section>
+<h2>Subway Grocer</h2>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/h7HnR02kJxY" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section>
+<h2>Fiat coin</h2>
+<p>Engadget <a href="http://www.engadget.com/2011/06/18/dutch-coins-feature-qr-codes-promise-surprises/">Dutch coins feature QR code</a></p>
+</section>
+
+<section>
+<h2>Bitcoins</h2>
+<h3>Money transaction on the street</h3>
+<img src="../assets/bitcoin/wallet_qrcode.jpg">
+<p><small><a href="https://localbitcoins.com/ad/1005/buy-bitcoins-with-cash-downtown-vancouver-bc-west-end-">LocalBitcoins.com</a></small></p>
+</section>
+
+<section>
+<h2>Signage</h2>
+<img src="../assets/qrcode_catch_them_all.jpg">
+<p><small><a href="http://wtfqrcodes.com/">WTF QR codes</a></small></p>
+</section>
+
+<section data-markdown><textarea data-template>
+## Apps
+
+#### QR code scanner
+
+* iOS 11 has QR Code reader built into Camera app
+* iOS [Bakodo](http://itunes.apple.com/us/app/bakodo-barcode-scanner-qr/id371932548?mt=8)
+* Android [Barcode Scanner](https://play.google.com/store/apps/details?id=com.google.zxing.client.android&hl=en) or [QR Droid](https://play.google.com/store/apps/details?id=la.droid.qr&hl=en)
+* Samsung Android - Optical Reader is bundled with the operating system
+</textarea></section>
+
+<section>
+<h2>Generators</h2>
+<ul>
+	<li><a href="http://www.qrstuff.com/">QR Stuff</a> - different formats with colour</li>
+	<li><a href="http://www.qrcode-monkey.com/">QRCode-Monkey-Generator</a> - logo placement</li>
+</ul>
+</section>
+
+<section data-markdown><textarea data-template>
+## WiFi Hotspot
+
+* [Example](https://twitter.com/MarcelmeyerMm/status/872204014070284289)
+* `WIFI:S:<SSID>;T:<WPA|WEP|>;P:<password>;;`
+</textarea></section>
+
+<section>
+<h2>Business Card</h2>
+<img src="../assets/qrcode_business_card.jpg">
+<p><small>Webdesigner Depot <a href="http://www.webdesignerdepot.com/2011/07/30-creative-qr-code-business-cards/">30 Creative QR code business cards</a></small></p>
+</section>
+
+<section>
+<h2>Formats</h2>
+<h3>vCard</h3>
+<pre><code contenteditable>BEGIN:VCARD
+VERSION:2.1
+N:Last;First
+FN:Full name
+ORG:Organization
+TITLE:Occupation title
+TEL;WORK;VOICE:(604) 123-4567
+TEL;HOME;VOICE:(778) 123-4567
+ADR;WORK:;;100 Waters Edge;Vancouver;BC;V7V7V7;Canada
+LABEL;WORK;ENCODING=QUOTED-PRINTABLE:100 Waters Edge=0D=Vancouver, BC V7V7V7=0D=0ACanada
+ADR;HOME:;;42 Plantation St.;Vancouver;BC;V7V7V7;Canada
+LABEL;HOME;ENCODING=QUOTED-PRINTABLE:42 Plantation St.=0D=Vancouver, BC V7V7V7=0D=0ACanada
+EMAIL;PREF;INTERNET:email@address.ca
+REV:20080424T195243Z
+END:VCARD</code></pre>
+<p><small><a href="http://en.wikipedia.org/wiki/Vcard">vCard format standard (wikipedia)</a></small></p>
+<p><small><a href="https://www.macrumors.com/2017/06/06/iphone-can-scan-qr-codes-ios-11/">iOS 11 vCard support</a></small></p>
+</section>
+
+<section>
+<h2>Formats</h2>
+<h3>meCard</h3>
+<pre><code contenteditable>MECARD:
+N:Last,First;
+NOTE:Occupation title;
+TEL:16041234567;
+EMAIL:email@address.ca;
+URL:http://www.website.com;;</code></pre>
+<p><small><a href="https://www.nttdocomo.co.jp/english/service/developer/make/content/barcode/function/application/addressbook/index.html">meCard format standard</a></small></p>
+</section>
+
+<section>
+<h2>Google Infographic API</h2>
+<a href="https://developers.google.com/chart/infographics/docs/qr_codes">QueryString API documentation</a>
+</section>
+
+<section>
+<h2>Resources</h2>
+<ol>
+	<li>SEW <a href="http://searchenginewatch.com/sew/how-to/2066777/top-14-things-marketers-need-know-about-qr-codes">Top 14 Things Marketers Need to Know About QR Codes</a></li>
+	<li><a href="http://www.qrcode.com/en/history/">History of QR Code</a></li>
+</ol>
+</section>
+	{/body}

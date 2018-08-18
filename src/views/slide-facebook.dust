@@ -1,0 +1,41 @@
+{>"layout-slide"/}
+
+{<body}
+	<section>
+		<h1>Facebook</h1>
+		<h3>Social networking service</h3>
+	</section>
+
+	<section>
+		<section>
+			<h2>Social plugin</h2>
+			<h4>Limited customization, easiest to install</h4>
+		</section>
+
+		<section>
+			<h2>Third-party bookmarking</h2>
+			<ul>
+				<li><a href="http://sharethis.com/">Share This</a></li>
+				<li><a href="http://www.addthis.com/">Add This</a></li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Like Button</h2>
+			<p><a href="http://developers.facebook.com/docs/reference/plugins/like/">Facebook</a></p>
+		</section>
+	</section>
+
+	<section>
+		<section>
+			<h2>API Documentation</h2>
+			<h4>Very flexible, difficult to authenticate</h4>
+			<p><a href="https://developers.facebook.com/docs/reference/api/">Graph API</a></p>
+		</section>
+
+		<section>
+			<h2>API Explorer</h2>
+			<p><a href="https://developers.facebook.com/tools/explorer">Graph API Explorer</a></p>
+		</section>
+	</section>
+{/body}

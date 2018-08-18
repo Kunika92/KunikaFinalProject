@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+  <meta name="description" content="">
+	<title>Kunika | API Final Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+</head>
+<body>
+<main class="container">
+	<div class="project">
+		<h1>API Final Project</h1>
+		<p>Analying remote images on Flickr to list tags based on content</p>
+
+		<h5>Resources</h5>
+		<ul>
+			<li>Microsoft Azure's Computer Vision API v2.0</li>
+			<li>Flickr API</li>
+		</ul>
+
+		<h5>Goal</h5>
+		<p>User could search for nearby images based on coordinates, and see thumbnails with tags based on content.</p>
+	</div>
+	<section>
+		<h3>Enter Location Coordinates</h3><br>
+		<ul id="photos"></ul>
+		<form id="location_form">
+			<div>
+				<label for="lat">Latitude</label>
+				<input type="text" id="lat" name="lat" pattern="^(\+|-)?(?:90(?:(?:\.0{1,6})?)|(?:[0-9]|[1-8][0-9])(?:(?:\.[0-9]{1,6})?))$">
+			</div>
+			<div>
+				<label for="log">Longitude</label>
+				<input type="text" id="log" name="log" pattern="^(\+|-)?(?:180(?:(?:\.0{1,6})?)|(?:[0-9]|[1-9][0-9]|1[0-7][0-9])(?:(?:\.[0-9]{1,6})?))$">
+			</div>
+			<br>
+
+			<div><button type="submit" class="btn btn-info">Show Images</button></div>
+		</form>
+	</section>
+	<img id="spinner" src="./spinner.gif" class="hide">
+	<div id="gallery"></div>
+</main>
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<!-- Attach all the bundles JavaScript files in /src/js -->
+<script src="/js/critical.js"></script>
+<!-- Execute page specific function -->
+<script>getFlickrPublicImages();</script>
+</body>
+</html>

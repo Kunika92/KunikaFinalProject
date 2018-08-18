@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery events</title>
+	<style>
+		#hover { color: red; } /* normal */
+		#hover:hover { color: pink; } /* CSS hover */
+		.hover { text-decoration: none; } /* remove underline via JS hover */
+	</style>
+</head>
+<body>
+
+	<h1>Events</h1>
+	
+	<h3>Goal</h3>
+	<p>Learn the common mouse and keyboard events so JavaScript may respond to a user's interactions.</p>
+
+	<h3>Technologies</h3>
+	<ol>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+	</ol>
+
+	<h3>Resources</h3>
+	<ul>
+		<li><a href="http://api.jquery.com/category/events/">jQuery Events</a></li>
+	</ul>
+	
+	<h3>Live demo</h3>
+	<a href="javascript:;">Dumb link</a><br>
+	<a href="#">Dumb link as #</a><br>
+	<a href="javascript:;" onclick="clickLog()">Click event using HTML attribute JavaScript</a><br>
+	<a href="javascript:;" id="click">Click event using traditional JS binding</a><br>
+	<a href="javascript:;" id="hover">Hover event</a><br>
+	
+	<form action="http://vanarts.com/" id="submit">
+		<input type="text" value="Blur/focus events" id="blur"><br>
+		<input type="text" value="Keyboard events" id="keyboard"><br>
+	
+		<input type="submit" value="Submit event">
+		<input type="button" value="Button not submit button" id="btn">
+	</form>
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Page specific code -->
+<script>
+	function clickLog() {
+		console.log('hello click');
+	};
+	
+	// tradition JS binding
+	// document.getElementById('click').onclick = clickLog; // named function
+	// jQuery event binding
+	$('#click').on('click', clickLog);
+	$('#click').click(clickLog);
+
+	// todo inclass convert classic JavaScript to jQuery events
+
+	// SOLUTION
+	// window.onload = function () { // an anonymous function
+	// 	console.log('Load event - all the HTML in the document has rendered');
+	// };
+	$(window).on('load', function () { // an anonymous function
+		console.log('Load event - all the HTML in the document has rendered');
+	});
+	
+	// hover (mouseOver & mouseOut)
+	// document.getElementById('hover').onmouseover = function () {
+	// 	console.log('Mouse over event');
+	// 	this.className = 'hover'; // add class
+	// };
+	// document.getElementById('hover').onmouseout = function () {
+	// 	console.log('Mouse out event');
+	// 	this.className = ''; // remove class
+	// };
+	$('#hover').hover(
+		function () { // hover in
+			console.log('Mouse over event');
+			// this.className = 'hover'; // add class
+			// $(this).attr('class', 'hover');
+			$(this).addClass('hover');
+		},
+		function () { // hover out
+			console.log('Mouse out event');
+			// this.className = ''; // remove class
+			// $(this).attr('class', '');
+			$(this).removeClass('hover');
+		}
+	);
+	
+	// blur/focus
+	// document.getElementById('blur').onblur = function () { this.value = 'Blur'; };
+	// document.getElementById('blur').onfocus = function () { this.value = 'Focus'; };
+	$('#blur')
+		.blur(function () {
+			this.value = 'Blur';
+		})
+		.focus(function () {
+			this.value = 'Focus';
+		});
+	
+	// keyboard events
+	// document.getElementById('keyboard').onkeydown = function () { console.log('Key Down'); };
+	// document.getElementById('keyboard').onkeyup = function () { console.log('Key Up'); };
+	// document.getElementById('keyboard').onkeypress = function () { console.log('Key Press'); };
+	$('#keyboard')
+		.keydown(function () { console.log('Key Down'); })
+		.keyup(function () { console.log('Key Up'); })
+		.keypress(function () { console.log('Key Press'); });
+	
+	// Down & Press occur on repetition
+	// Press only occurs when a character is added to HTML
+	// Down supports arrows too (Chrome, Firefox also triggers Press)
+	// Up occurs on release
+	
+	// submit only works on <form> with a input submit button (will not trigger on type="button")
+	// document.getElementById('submit').onsubmit = function () {
+	// 	console.log('Submit');
+	// 	return false; // cancels form action; prevents form submission
+	// };
+	$('#submit').submit(function (event) {
+		console.log('Submit');
+		event.preventDefault(); // cancels form action; prevents form submission
+	});
+</script>
+</body></html>

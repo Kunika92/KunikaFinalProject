@@ -1,0 +1,66 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>array methods</title>
+</head>
+
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>Array with Methods</h2>
+	
+	<h3>Goal</h3>
+	<p>Manipulate arrays with built-in methods</p>
+	
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+	
+	<h3>Reference</h3>
+	<ul>
+		<li>w3schools <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">Array methods</a></li>
+		<li>MDN <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join method</a></li>
+	</ul>
+	
+	<h3>Live demo</h3>
+	<script>
+		var weekend = [];
+		weekend.push('Sat', 'Sun'); // memorize
+		console.log(weekend);
+		
+		var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+		console.log(months.reverse());
+		
+		// export from array to string
+		console.log(months.join(' and ')); // important so memorize
+		
+		// build a sentance without concatenating
+		var sentence = ['sit', 'a'];
+		sentence.push('classroom'); // add to end
+		sentence.unshift('I'); // add to beginning
+		// [I, sit, a, classroom]
+		sentence.splice(2, 0, 'in'); // add to middle, second index without removing
+		console.log(sentence.join(' '));
+		
+		/* todo inclass: Output to the console as a string, a list of month's name each with an italic element by 
+		using the array methods (i.e. <i>Jan</i> <i>Feb</i> <i>Mar</i>...) */
+		// Note: Do not modify the code above, and reuse the months variable
+
+		// SOLUTION
+		// months.reverse() Correct order [Jan, Feb, Mar]
+		// months.reverse().join('') Convert to string "Jan, Feb, Mar"
+		// months.reverse().join('</i> <i>') With advance delimiter (seperator) "Jan</i> <i>Feb</i> <i>Mar"
+		// '<i>' + months.reverse().join('</i> <i>') + '</i>' Bookend the italic elements <i>Jan</i> <i>Feb</i> <i>Mar</i>
+		console.log('<i>' + months.reverse().join('</i> <i>') + '</i>');
+
+		// todo inclass Move Jan between Apr and May
+		// SOLUTION
+		months.splice(4, 0, months[0]);
+		console.log(months);
+		months.splice(0, 1); // or shift method
+		console.log(months);
+	</script>
+</body>
+</html>

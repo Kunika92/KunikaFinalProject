@@ -1,0 +1,43 @@
+{>"layout-slide"/}
+
+{<body}
+	<section>
+		<h1>AJAX</h1>
+		<p><a href="../code/ajaxOverview.html">Overview</a></p>
+	</section>
+	<section>
+		<h2>Asynchronous</h2>
+		<ol>
+			<li>perceived performance</li>
+			<li>actual performance</li>
+		</ol>
+		<h2>Synchronous</h2>
+		<ul>
+			<li>block the execution of code</li>
+			<li>leak memory</li>
+			<li>orphan event</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>XML</h2>
+		<pre><code contenteditable>&lt;weather&gt;
+    &lt;vancouver condition="cloudy"&gt;
+        &lt;c&gt;21&lt;/c&gt;
+        &lt;f&gt;70&lt;/f&gt;
+    &lt;/vancouver&gt;
+&lt;/weather&gt;</code></pre>
+		<h2>JSON</h2>
+		<pre><code contenteditable>{
+    "vancouver": {
+        "c": 21,
+        "f": 70,
+        "condition": "cloudy"
+    }
+}</code></pre>
+	</section>
+
+	<section>
+			<p>Another name for AJAX is XHR - XML HTTP Request - HTTP Request</p>
+	</section>
+{/body}

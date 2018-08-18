@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Chess board</title>
+	<!-- SOLUTION begin -->
+	<link href="game.css" rel="stylesheet" type="text/css" />
+	<style>
+		.highlight { outline: red solid 2px }
+	</style>
+	<!-- SOLUTION end -->
+</head>
+<body>
+
+<div style="float: left; width: 200px;">
+	<h3>Chess board</h3>
+	<ul>
+		<li>Download the HTML, <a href="game.css">CSS</a>, and <a href="images.zip">images</a></li>
+	</ul>
+	<h3>Goal</h3>
+	<ol>
+		<li>
+			<ul style="padding-left: 1rem">
+				<li>As a <b>user</b>, select a chess piece to highlight the square with a red outline.</li>
+				<li>As a <b>dev</b>, loop through all the chess pieces and bind a click event. Handle the click by applying a CSS rule of border: red solid 2px</li>
+			</ul>
+		</li>
+		<li>As a <b>user</b>, selecting various chess pieces will only hightlight one square at a time</li>
+		<li>As a <b>dev</b>, pressed arrow keys should be detected and logged in the console</li>
+		<li>As a <b>user</b>, pressing the arrow keys will move the highlighted chess piece without ristriction of board. Move highlighted piece one square per key (up, down, right, left)</li>
+		<li>As a <b>user</b>, pressing the arrow keys will move the highlighted chess piece <b>within the boundary of the chess board</b>.</li>
+		<li>As a <b>user</b>, pressing the arrow keys will move the highlighted chess piece <b>with animation</b> within the boundary of the chess board.</li>
+	</ol>
+</div>
+
+<div id="chessboard">
+	<div class="piece" id="c1"></div>
+	<div class="piece" id="h1"></div>
+	<div class="piece" id="e1"></div>
+	<div class="piece" id="k1"></div>
+	<div class="piece" id="q1"></div>
+	<div class="piece" id="e2"></div>
+	<div class="piece" id="h2"></div>
+	<div class="piece" id="c2"></div>
+	<div class="piece wp" id="wp1"></div>
+	<div class="piece wp" id="wp2"></div>
+	<div class="piece wp" id="wp3"></div>
+	<div class="piece wp" id="wp4"></div>
+	<div class="piece wp" id="wp5"></div>
+	<div class="piece wp" id="wp6"></div>
+	<div class="piece wp" id="wp7"></div>
+	<div class="piece wp" id="wp8"></div>
+	<div class="piece bp" id="bp1"></div>
+	<div class="piece bp" id="bp2"></div>
+	<div class="piece bp" id="bp3"></div>
+	<div class="piece bp" id="bp4"></div>
+	<div class="piece bp" id="bp5"></div>
+	<div class="piece bp" id="bp6"></div>
+	<div class="piece bp" id="bp7"></div>
+	<div class="piece bp" id="bp8"></div>
+	<div class="piece" id="c3"></div>
+	<div class="piece" id="h3"></div>
+	<div class="piece" id="e3"></div>
+	<div class="piece" id="k2"></div>
+	<div class="piece" id="q2"></div>
+	<div class="piece" id="e4"></div>
+	<div class="piece" id="h4"></div>
+	<div class="piece" id="c4"></div>
+</div>
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Attach all the bundles JavaScript files in /src/js -->
+<script src="/js/critical.js"></script>
+<!-- Execute page specific function -->
+<script>playChess();</script>
+</body>
+</html>

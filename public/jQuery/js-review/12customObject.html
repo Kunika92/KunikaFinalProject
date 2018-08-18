@@ -1,0 +1,65 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>object custom</title>
+</head>
+
+<body>
+	<h1>Variable Types</h1>
+	<h2>Custom Object</h2>
+	
+	<h3>Goal</h3>
+	<p>Better understand the different between methods and properties</p>
+	
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+	
+	<h3>Live demo</h3>
+	<script>
+		var pizza = {
+			toppings: '', // property (var toppins = '';)
+			addTopping: function (newTopping) { // method
+				// this is relative to the owner of the method, which is the object 'pizza'
+				
+				if (this.toppings === '') { // compares value and variable type 'true' is NOT equal to true
+					this.toppings = newTopping;
+				} else {
+					// this.toppings = this.toppings + ', ' + newTopping;
+					this.toppings += ', ' + newTopping; // shortcut
+				}
+			}
+		};
+		
+		pizza.addTopping('tomato sauce');
+		pizza.addTopping('cheese');
+		// pizza.addCrust('multigrain');
+		
+		console.log('I will eat a pizza with ' + pizza.toppings );
+		// console.log('I will eat a pizza with ' + pizza.toppings + ' toppings and has this crust ' + pizza.crust );
+
+		//todo inclass: Add the addCrust method and add the crust property to the pizza object
+		/* pseudo code
+			method is a function; often with multiple lines of code; reusable; changing a value or computing
+			property is a value (string, number, boolean, array, object)
+			if statement has not been taught so the solution does NOT need the use of ifs
+		*/
+
+		// SOLUTION
+		// an immutable variable is an variable whose state cannot be modified after it is created
+		// pizza is a mutable variable, meaning the state may be changed
+		pizza.addCrust = function (newCrust) {
+			this.crust = newCrust;
+		};
+		pizza.addCrust('multigrain');
+		console.log(
+			'I will eat a pizza with ' + pizza.toppings +
+			' toppings and has this crust ' + pizza.crust
+		);
+	</script>
+
+</body>
+</html>

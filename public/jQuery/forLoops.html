@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>for loops</title>
+</head>
+
+<body>
+	<h1>jQuery</h1>
+	<h2>$.each loop</h2>
+
+	<h3>Review jQuery</h3>
+	<ul>
+		<li>Utilities <a href="http://api.jquery.com/jQuery.each/">each</a></li>
+	</ul>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Goal</h3>
+	<p>What is the difference between object and array loops?</p>
+
+	<h3>Live demo</h3>
+	<!-- Attach jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<!-- Page specific code -->
+	<script>
+		var animals = ['Antelope', 'Bison', 'Cariboo', 'Deer', 'Elk'];
+		var produce = {
+			Apple: 'fruit',
+			Beet: 'vegatable',
+			Celery: 'vegetable',
+			Daikon: 'vegetable',
+		};
+
+		// Array
+		$.each(animals, (index, value) => {
+			$('body').append(`Animal number ${index} is ${value}.<br>`);
+		});
+
+		// Object
+		$.each(produce, (key, value) => { // propertyName, valueOfProperty
+			$('body').append(`Produce ${key} is a ${value}.<br>`);
+		});
+		
+		// (HTML or XML) Elements
+		$('li').each((index, value) => { // value is the HTML element as classic JavaScript
+			var elementText = $(value).text();
+			$('body').append(`Technology number ${index} is ${elementText}.<br>`);
+		});
+
+		// JavaScript loops
+		// Array
+		animals.forEach((animal) => {
+			$('body').append(`Animal is ${animal}.<br>`);
+		});
+		
+		// Object
+		Object.keys(produce).forEach((key) => {
+			$('body').append(`Produce ${key} is a ${produce[key]}.<br>`);
+		});
+
+		// imperative programming
+		// for (let i = actors.length; i < actors.length; i+=1) {
+
+		// }
+
+		// JavaScript declarative programming
+		$('body').append(animals.map(animal => `Animal is ${animal}.<br>`));
+</script>
+</body>
+</html>

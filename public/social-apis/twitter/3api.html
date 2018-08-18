@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Twitter User Timeline</title>
+</head>
+
+<body>
+	<h1>Twitter</h1>
+	<h2>Publish</h2>
+	
+	<h3>Goal</h3>
+	<ol>
+		<li>As a user, I want to keep up-to-date with VanArts news via Twitter.<br>
+			<b>Your VanArts client has rejected your solution</b>. Due to VanArts web users leaving VanArts site for Twitter.com and there is too much friction for VanArts users to subscribe to the news as a Twitter user is required to follow VanArts on Twitter.</li>
+		<li>As a user, I want to keep up-to-date with VanArts news via Twitter without creating a Twitter account and users should remain on VanArts web site.<br>
+			<b>Your VanArts client has rejected your solution</b>. Due to large font, content widths not matching and overall layout is mismatched.</li>
+		<li>As a user, I want to keep up-to-date with VanArts news via Twitter without creating a Twitter account and users should remain on VanArts web site. The layout should be consistent for the entire web page.</li>
+	</ol>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li><a href="https://dev.twitter.com/rest/reference">Twitter API</a></li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<ol id="tweets"></ol>
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Attach all the bundles JavaScript files in /src/js -->
+<script src="/js/critical.js"></script>
+<!-- Execute page specific function -->
+<script>getTwitterTweets();</script>
+</body>
+</html>

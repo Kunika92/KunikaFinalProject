@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>CSS tree</title>
+	<style>
+		.rule1 { font-style: italic; }
+		.rule2 { background-color: yellow; }
+		.rule3 { color: red; }
+		.rule4 { text-decoration: underline; }
+	</style>
+</head>
+<body>
+
+<h1>DOM</h1>
+<h2>Document Object Model</h2>
+
+<p>HTML or XML represented as an object with elements broken down into tags, text, and attributes.</p>
+
+<h3>Technology</h3>
+<ul>
+	<li>CSS</li>
+</ul>
+ 
+<h3>Live Demo</h3>
+<!-- Ancestors (upwards) -->
+<ul>
+	<li>Great grandparent
+	<ul>
+		<li class="rule2">Grandparent
+		<ul>
+			<li class="rule1">Parent 
+			<ul>
+				<li id="here">Tree structure relative to here
+					<ul><li class="rule3">Child</li><li>Children</li></ul> <!-- Descendant (downwards) -->
+				</li>
+				<li class="rule4">Sibling</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<h3>Rules</h3>
+<ol>
+	<li>Apply italic to parent</li>
+	<li>Apply yellow to the grandparent's background</li>
+	<li>Apply red to the child's text</li>
+	<li>Apply underline to the sibling</li>
+</ol>
+
+</body></html>

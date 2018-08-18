@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Autocomplete Design Pattern</title>
+	<style>
+		.hide { display: none; }
+		#country_keywords, #country_suggestions { width: 200px; }
+		#country_suggestions.expanded {
+			border-width: 0 1px 1px 1px;
+			border-color: black;
+			border-style: solid;
+			box-shadow: 6px 10px 5px 6px #ccc;
+			margin-top: 0;
+			padding-left: 0;
+		}
+		#country_suggestions ul { margin: 0; padding: 0; }
+		#country_suggestions li { list-style-type: none; padding: 0 4px; }
+		.hightlight { background-color: yellow; }
+	</style>
+</head>
+
+<body>
+<h1>Autocomplete widget</h1>
+
+<h3>Goal</h3>
+<p>As a user, suggestions are hinted to me while searching for a country.</p>
+<p>As a developer, build the UI (user interface) with keyboard events listening for each key press in the text input field. Send the input value to the autocomplete service and display the response to the user.</p>
+
+<h3>Sub-goal</h3>
+<ol>
+	<li>As a developer, listen to the text input and display its value in the suggestion container for every character typed.</li>
+	<li>As a developer, listen to the text input, pass the value to the autocomplete service, and output the response in the suggestion container.</li>
+	<li>As a developer, I want the autocomplete suggestions to displayed as a bulleted list</li>
+	<li>As a developer, I want the autocomplete suggestions to be styled one per line with a surrounding outline with drop shadow.</li>
+	<li>As a user, I want to be notified when the autocomplete service is slow and forces me to wait</li>
+	<li>As a user, I want to use my keyboard to highlight autocomplete suggestions.</li>
+</ol>
+
+<h3>Technologies</h3>
+<ul>
+	<li><a href="https://jquery.com/">jQuery</a></li>
+	<li>jQuery <a href="http://api.jquery.com/jQuery.ajax/">AJAX</a></li>
+	<li>JSON</li>
+	<li>JavaScript</li>
+	<li>CSS</li>
+	<li>HTML</li>
+	<li><a href="https://hapijs.com">hapi.js</a></li>
+	<li><a href="https://nodejs.org/en/">node.js</a></li>
+</ul>
+
+<h3>Live demo</h3>
+<p>What country do you want to visit?</p>
+<input id="country_keywords" type="text"> <img id="spinner" src="./spinner.gif" class="hide">
+<ul id="country_suggestions"></ul>
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Attach all the bundles JavaScript files in /src/js -->
+<script src="/js/critical.js"></script>
+<!-- Execute page specific function -->
+<script>autocomplete();</script>
+</body>
+</html>

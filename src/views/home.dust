@@ -1,0 +1,13 @@
+{>"layout"/}
+
+{<body}
+	<h1>Node.js web server</h1>
+	<ul>
+		<li><a href="/slides">Slideshows 🎦</a></li>
+		<li><a href="/jquery">jQuery &amp; AJAX course files</a></li>
+		<li><a href="/social-apis">API course files</a></li>
+		<li><a href="/calendar.html">Teaching schedule calendar 📅</a></li>
+	</ul>
+
+	<script src="js/critical.js"></script>
+{/body}

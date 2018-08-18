@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Validation</title>
+	<style>
+		input:invalid { background: pink; }
+		:focus { border: 2px solid yellow; }
+	</style>
+</head>
+
+<body>
+	<h1>jQuery</h1>
+	<h2>Form Validation</h2>
+	
+	<h3>Goal</h3>
+	<ol>
+		<li>Prevent a user from submitting using client-side code.</li>
+		<li>As a developer, prevent the form action when any instruction is visible (when all visible then form is valid)</li>
+		<li>As a user, I want to see an instruction message when the input field is blank</li>
+		<li>As a user, I want the invalid fields to shake when form is invalid</li>
+		<li>As a user, when form is invalid, I want the first invalid field to be in focus</li>
+		<li>As a user, I want to see a colour change of the in focus field outline</li>
+	</ol>
+	
+	<h3>Technologies</h3>
+	<ol>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+		<li>CSS</li>
+		<li>HTML</li>
+	</ol>
+	
+	<h3>Live demo</h3>
+	<form action="http://www.vanarts.com/" id="contact-form">
+		<div>
+			<label>
+				Email <input type="email" id="email" required placeholder="sample@domain.ca">
+			</label>
+		</div>
+		<div>
+			<label>
+				Location <input type="text" id="location" required placeholder="Postal code/Zip code">
+			</label>
+		</div>
+		<div>
+			<label>
+				Phone <input type="tel" id="phone" placeholder="Mobile telephone number">
+			</label>
+		</div>
+
+		<input type="submit" value="Are my fields valid?">
+	</form>
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Attach jQuery UI library -->
+<script src="jquery-ui.min.js"></script>
+<!-- Page specific code -->
+<script>
+	document.querySelector('#contact-form input[type=submit]').addEventListener('click', function () {
+		$('input:invalid').effect('shake', { distance: 5, times: 2 });
+	});
+	
+	// $('#contact-form').submit(
+	document.querySelector('#contact-form').addEventListener('submit', function (event) {
+		var isFormValid = document.querySelector('#contact-form').checkValidity();
+		
+		if (!isFormValid) {
+			event.preventDefault();
+		}
+	});
+</script>
+</body>
+</html>

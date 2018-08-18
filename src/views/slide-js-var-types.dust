@@ -1,0 +1,165 @@
+{>"layout-slide"/}
+
+{<body}
+	<section>
+          <h1>Variables</h1>
+          <ul>
+            <li><i>containers</i> for storing small information</li>
+            <li>case sensitive</li>
+            <li>must start with a letter or underscore (_)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Variable Types</h1>
+          <ul>
+            <li>String</li>
+            <li>Number</li>
+            <li>Boolean</li>
+            <li>Functions</li>
+            <li>Object</li>
+            <li>Array</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>String</h2>
+          <h3>a piece of text</h3>
+          <pre><code contenteditable>var city = 'Vancouver';
+var word = "n" + 'e' + 'w' + "s"; // string concatenation
+// notice either quotation (") and apostrophe (') is allowed</code></pre>
+          <p><img src="../assets/string-pieces.jpg"></p>
+          <p><small>Resource <a href="http://www.w3schools.com/jsref/jsref_obj_string.asp">w3schools</a></small></p>
+        </section>
+
+        <section>
+          <h2>Number</h2>
+          <h3>whole number or decimal</h3>
+          <pre><code contenteditable>var olympics = 4 + 2006.2; // integer (1) or float (1.0)</code></pre>
+        </section>
+
+        <section>
+          <h2>Boolean</h2>
+          <h3>true or false</h3>
+          <pre><code contenteditable>var show = true;</code></pre>
+        </section>
+
+        <section>
+          <h2>Function</h2>
+          <h3>method()</h3>
+          <pre><code contenteditable>var showMsg = function () { alert('Hello World'); }; // define anonymous function
+showMsg(); // execute</code></pre>
+        </section>
+
+        <section>
+          <section>
+            <h2>Object</h2>
+            <h3>a structure of properties and methods</h3>
+            <pre><code contenteditable>var json = { property: true, method: function (param) { return param + this.property; } };
+  json.property = 'overwritten'; // properties are variables that can either set or get
+  json.method('Property '); // parentheses indicate a method</code></pre>
+            <p><small>Resource <a href="json.html">JSON</a></small></p>
+          </section>
+
+          <section>
+            <h3>Built-in Objects</h3>
+            <p>access to the browser details through predefined objects</p>
+              <ul>
+                  <li>window <small>Resource <a href="http://www.w3schools.com/jsref/obj_window.asp">w3schools</a></small></li>
+                  <li>document <small>Resource <a href="http://www.w3schools.com/jsref/dom_obj_document.asp">w3schools</a></small></li>
+                  <li>Array <small>Resource <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">w3schools</a></small></li>
+                  <li>Date <small>Resource <a href="http://www.w3schools.com/jsref/jsref_obj_date.asp">w3schools</a></small></li>
+              </ul>
+
+              <pre><code class="javascript">// window
+window.alert('Window Property: ' + window.navigator.appName);
+
+// document
+alert('Document Method: ' + document.getElementsByTagName('h1')[0].innerHTML + '; Property: ' + document.title);
+
+// Array
+var weekdays = new Array('Mo','Tu','We','Th','Fr');
+alert('Method:' + weekdays.reverse() + '; Property:' + weekdays.length);
+
+// Date
+var now = new Date();
+alert('Method: ' + now.getFullYear());</code></pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Array</h1>
+            <h2>a list of variables</h2>
+            <pre><code contenteditable>var weekend = ['Sat', 'Sun'];</code></pre>
+            <p>Resource <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">w3schools</a></p>
+          </section>
+
+          <section>
+            <h2>Define an array</h2>
+            <pre><code contenteditable>var string = 'string';
+var number = 2000;
+var boolean = true;
+var object = document;
+var array = ['A', 'B', 'C'];
+var variableTypes = [string, number, boolean, object, array];
+console.log(variableTypes);
+
+// Using the push method, add text to the end of the array
+var weekend = ['Sat', 'Sun'];
+weekend.push('Vacation'); // now the length property is three
+console.log(weekend);
+
+// insert text before Sun and Vacation
+weekend.splice(2, 0, 'Holiday');
+console.log(weekend);
+
+weekend.reverse(); // reverse our array order
+console.log(weekend);
+
+// output array as a sentance
+console.log('This school is closed for the upcoming ' + weekend[0] + ' and ' + weekend[1] + '!  Lab hours are available on ' + weekend[3] + ' and ' + weekend[2] + '.');
+
+// alternative to push method
+weekend[4] = 'Leap day';
+console.log(weekend);
+
+// array elements now scrambled http://www.javascriptkit.com/javatutors/arraysort.shtml
+weekend.sort(function() {return 0.5 - Math.random()});
+console.log(weekend);</code></pre>
+          </section>
+
+          <section>
+            <h2>Avoid concatination</h2>
+            <ul>
+              <li>String concatenation operations will decrease performance</li>
+              <li>Convert array to string using Array.join()</li>
+            </ul>
+            <pre><code contenteditable>var tmp = [];
+for (/* each piece */)  {
+    tmp.push( '<b>', 'prefix:', piece, '</b>' );
+}
+str = tmp.join('');
+return str;</code></pre>
+          </section>
+
+          <section>
+            <h2>Madlib example</h2>
+            <pre><code contenteditable>var actions = ['code', 'read', 'swim', 'skateboard', 'kiss'];
+var places = ['Railway Club', 'SeaBus', 'Art Gallery', 'Pacific Centre', 'BC Place'];
+var lunches = ['submarine sandwich', 'burrito', 'sushi', 'donair', 'chicken feet'];
+
+// be unpredictable, change the array index order
+actions.reverse();
+lunches.sort(); // applies alphabetical order
+places.sort();
+
+console.log('At noon I plan on eatting ' + lunches[0] + ' at my favourite location of ' + places[3] + ' then ' + actions[4] + 'ing before class!');
+
+var times = prompt('What is your fav times of day (provide a comma delimited list)');
+times = times.split(','); // convert the string variable to an array; using a string object method
+
+console.log('At ' + times[1] + ' I plan on eatting ' + lunches[0] + ' at my favourite location of ' + places[3] + ' then ' + actions[4] + 'ing before class!');</code></pre>
+          </section>
+        </section>
+{/body}

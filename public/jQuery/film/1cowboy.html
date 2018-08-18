@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>AJAX film dropdown</title>
+</head>
+
+<body>
+	<h1>AJAX</h1>
+	<h2>Loop through Rotten Tomatoes</h2>
+	
+	<h3>Technologies</h3>
+	<ul>
+		<li>jQuery AJAX</li>
+		<li>JSON</li>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+	</ul>
+	
+	<h3>Goal</h3>
+	<p>As a dev, display the actors in a dropdown menu</p>
+
+	<h3>Dev steps</h3>
+	<ol>
+		<li>Understand the JSON schema</li>
+		<li>Request the <em>cowboy.json</em> resource and display the response in the browser console.</li>
+		<li>Find <b>one</b> actor and append to DOM in the dropdown menu</li>
+		<li>Loop through <b>all</b> actors and append to dropdown menu</li>
+	</ol>
+
+	<h3>New jQuery</h3>
+	<ul>
+		<li>ajax <a href="http://api.jquery.com/jQuery.ajax/">Low-level AJAX</a></li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<select id="actors">
+		<option>Select an Actor</option>
+	</select>
+
+	<!-- Attach jQuery library -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Attach all the bundles JavaScript files in /src/js -->
+	<script src="/js/critical.js"></script>
+	<!-- Execute page specific function -->
+	<script>cowboysDropdown();</script>
+
+</body>
+</html>

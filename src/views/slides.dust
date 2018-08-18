@@ -1,0 +1,23 @@
+{>"layout"/}
+
+{<body}
+	<h1>Slideshows</h1>
+	<ol>
+		<li><a href="/slides/client-side">Client Side</a></li>
+		<li><a href="/slides/js-var-types">JavaScript Variable Types</a></li>
+		<li><a href="/slides/cdn">CDN</a></li>
+		<li><a href="/slides/js-events">Input Events</a></li>
+		<li><a href="/slides/json">JSON</a></li>
+		<li><a href="/slides/ajax">AJAX</a></li>
+		<li><a href="/slides/rss">RSS</a></li>
+		<li><a href="/slides/git">Git</a></li>
+		<li><a href="/slides/api">API</a></li>
+		<li><a href="/slides/qrcode">QR Code</a></li>
+		<li><a href="/slides/flickr">Flickr</a></li>
+		<li><a href="/slides/twitter">Twitter</a></li>
+		<li><a href="/slides/facebook">Facebook</a></li>
+	</ol>
+
+	<script src="js/critical.js"></script>
+	<script>var slides = '{slides}'; /* todo */</script>
+{/body}

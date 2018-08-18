@@ -1,0 +1,15 @@
+{>"layout-slide"/}
+
+	{<body}
+<section>
+<h1>Instagram</h1>
+<h3>Photo hosting</h3>
+<h3>Video streaming</h3>
+</section>
+
+<section>
+<ul>
+	<li><a href="https://www.instagram.com/developer/">Developer</a></li>
+</ul>
+</section>
+	{/body}

@@ -1,0 +1,54 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>if statements</title>
+</head>
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>If condition</h2>
+	
+	<h3>Goal</h3>
+	<p>Support multiple logical paths with conditional if statements</p>
+	
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Resource</h3>
+	<ul>
+		<li><a href="/code/comparison_operators.html">Comparison operators</a></li>
+	</ul>
+	
+	<h3>Live demo</h3>
+	<script>
+		var isJavaScript = true;
+		var isNumber = 1;
+		var obj;
+
+		if (isNumber) {
+			console.log('1 is truthy');
+			console.log('boolean true is true');
+		}
+
+		if (isNumber === true) {
+			// number is not equal to boolean
+		}
+
+		if (isJavaScript === true) {
+			console.log('true');
+		}
+
+		if (obj) {
+			// will not occur as undefined is falsy
+			console.log(obj.name);
+		}
+
+		if (obj === undefined) {
+			console.log('This variable is undefined');
+		}
+	</script>
+ 
+</body></html>

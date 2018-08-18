@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery intro</title>
+</head>
+
+<body>
+	<h1>jQuery</h1>
+	<h2>Attach using CDN</h2>
+
+	<p>For the smallest filesize choose the minified and obfuscated version.</p>
+
+	<h3>Resources</h3>
+	<ul>
+		<li><a href="https://code.jquery.com/">jQuery CDNs</a></li>
+	</ul>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<div id="demo"></div>
+	<!-- Attach jQuery library -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<!-- Page specific JavaScript -->
+	<script>
+		// selector  method
+		// Before <div id="demo"></div>
+		// After <div id="demo">Text, HTML, or Inner HTML</div>
+		$('#demo').text('Hello this is jQuery');
+		document.querySelector('#demo').innerHTML = 'Hello this is plain JavaScript';
+	</script>
+</body>
+</html>

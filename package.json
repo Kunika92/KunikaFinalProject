@@ -1,0 +1,57 @@
+{
+  "name": "js-courses",
+  "version": "1.7.2",
+  "description": "Node.js site scaffolding with unit testing",
+  "main": "app-teacher.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "dev:student": "gulp dev:student",
+    "lint": "gulp lint",
+    "lintfix": "eslint --fix *.js src",
+    "start": "node .",
+    "start:student": "node app-student",
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VanArts/course-files.git"
+  },
+  "author": "Dan BROOKS",
+  "engines": {
+    "node": ">=8.9.x",
+    "npm": ">=5.5.x"
+  },
+  "license": "Dan BROOKS",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/VanArts/course-files/issues"
+  },
+  "homepage": "https://github.com/VanArts/course-files",
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "expect.js": "^0.3.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-develop-server": "^0.5.2",
+    "gulp-eslint": "^4.0.0",
+    "gulp-expect-file": "0.0.7",
+    "gulp-load-plugins": "^1.0.0-rc.1",
+    "gulp-mocha": "^6.0.0",
+    "htmlhint-stylish": "^1.0.3"
+  },
+  "dependencies": {
+    "dustjs-linkedin": "^2.7.5",
+    "hapi": "^17.5.1",
+    "inert": "^5.0.1",
+    "instagram-node": "^0.5.8",
+    "lout": "^11.0.1",
+    "request": "^2.87.0",
+    "twit": "^2.2.10",
+    "vision": "^5.3.2",
+    "wreck": "^14.0.2",
+    "yql": "^1.0.2"
+  }
+}

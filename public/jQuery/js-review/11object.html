@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>object</title>
+</head>
+
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>Objects</h2>
+
+	<h3>Goal</h3>
+	<p>Object with Property and Method build into browser</p>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<script>
+function showAlerts() {
+	// window
+	console.log('Window Property: ' + window.navigator.appName);
+	
+	// document
+	console.log('Document Method: ' + document.getElementsByTagName('h1')[0].innerHTML + '; Property: ' + document.title);
+
+	// Array
+	var weekdays = new Array('Mo','Tu','We','Th','Fr');
+	console.log('Method:' + weekdays.reverse() + '; Property:' + weekdays.length);
+
+	// Date
+	var now = new Date();
+	console.log('Method: ' + now.getFullYear());
+
+	document.title = now.getFullYear();
+}
+showAlerts();
+	</script>
+</body>
+</html>

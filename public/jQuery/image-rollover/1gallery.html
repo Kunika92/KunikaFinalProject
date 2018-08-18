@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Image gallery with rollovers</title>
+	<style>
+		.photo { width: 40rem; height: 30rem; }
+	</style>
+</head>
+
+<body>
+<h1>Photo Gallery</h1>
+<h2>Image Rollover Design Pattern</h2>
+
+<h3>User Story</h3>
+<p>As a user, I want to see another view of each image. For example when visiting a city what is the daytime and evening view?</p>
+
+<h3>Dev Steps</h3>
+<p>As a dev, use jQuery to apply image rollover interaction: when mouse is hovering over the image then reveal the secondary image.</p>
+<ol>
+	<li>One image</li>
+	<li>Many images - refactor code to reusable functions</li>
+</ol>
+
+<h3>Technologies</h3>
+<ul>
+	<li>jQuery</li>
+	<li>JavaScript</li>
+	<li>HTML</li>
+	<li>CSS</li>
+</ul>
+
+<h3>Live demo</h3>
+<img src="1926.jpg" alt="Stanley Park" data-secondary="2004.jpg" class="photo js-rollover">
+<img src="daytime.jpg" alt="Building" data-secondary="evening.jpg" class="photo js-rollover">
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Page specific code -->
+<script>
+	function setImgSrc(selector, readAttr) {
+		var path = $(selector).attr(readAttr);
+		$(selector).attr('src', path);
+	}
+
+	function hoverOn() {
+		var sourcePath = $(this).attr('src');
+		$(this).attr('data-primary', sourcePath); // backup the source path
+
+		setImgSrc(this, 'data-secondary');
+	}
+
+	function hoverOff() {
+		setImgSrc(this, 'data-primary');
+	}
+
+	$('img.js-rollover').hover(hoverOn, hoverOff);
+</script>
+</body>
+</html>

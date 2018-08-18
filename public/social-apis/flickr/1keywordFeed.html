@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Keyword search with Web Feed</title>
+</head>
+
+<body>
+<h1>CMS</h1>
+<h2>Content Management System</h2>
+
+<h3>Photography</h3>
+<p>Photos will be hosted by Flickr. We will leverage the tools provided by Flickr especially input and image manipulation services. Apps are available for mobile devices for convient photo uploading.</p>
+
+<h3>Resources</h3>
+<ul>
+	<li><a href="https://itunes.apple.com/us/app/flickr/id328407587">iOS App Store</a></li>
+	<li><a href="https://play.google.com/store/apps/details?id=com.yahoo.mobile.client.android.flickr&hl=en_US">Android Google Play</a></li>
+</ul>
+
+<h3>Goal</h3>
+<p>As a user, I want to see thumbnails photos of Vancouver</p>
+
+<h3>Technologies</h3>
+<ul>
+	<li>Flickr Web Feeds</li>
+	<li>JavaScript</li>
+	<li>jQuery</li>
+	<li>jQuery AJAX</li>
+</ul>
+
+<ul id="photos"></ul>
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- Attach all the bundles JavaScript files in /src/js -->
+<script src="/js/critical.js"></script>
+<!-- Execute page specific function -->
+<script>getFlickrPublicPhotos();</script>
+</body>
+</html>

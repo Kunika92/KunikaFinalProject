@@ -1,0 +1,27 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Value Types &amp; Nesting</title>
+</head>
+<body>
+	<h1>JSON</h1>
+	<h2>JavaScript Object Notation</h2>
+	<p>Variable types supported string, number, boolean, array AND objects. Excluding functions!</p>
+	
+	<h3>Live demo</h3>
+	<script>
+			var valueTypes = {}; // new object
+
+			valueTypes.s = "string";
+			valueTypes.i = 1; // integer
+			valueTypes.f = 1.25; // float
+			valueTypes.b = true; // boolean
+			valueTypes.a = ["string", 1, 1.25, false];
+			valueTypes.o = {"nested": true};
+			
+			console.log(valueTypes);
+	</script>
+ 
+</body></html>

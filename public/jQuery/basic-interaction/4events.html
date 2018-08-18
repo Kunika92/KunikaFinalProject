@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Traditional events</title>
+	<style>
+		#hover { color: red; } /* normal */
+		#hover:hover { color: pink; } /* CSS hover */
+		.hover { text-decoration: none; } /* remove underline via JS hover */
+	</style>
+</head>
+<body>
+ 
+	<h1>Events</h1>
+	
+	<h3>Goal</h3>
+	<p>Learn the common mouse and keyboard events so JavaScript may respond to a user's interactions.</p>
+
+	<h3>Technologies</h3>
+	<ol>
+			<li>JavaScript</li>
+	</ol>
+	
+	<h3>Live demo</h3>
+	
+	<a href="javascript:;">Dumb link (preferred)</a><br>
+	<a href="#">Dumb link as #</a><br>
+	<a href="javascript:;" onclick="clickLog()">Click event using HTML attribute JavaScript</a><br>
+	<a href="javascript:;" id="click">Click event using traditional JS binding</a><br>
+	<a href="javascript:;" id="hover">Hover event</a><br>
+	
+	<form action="http://vanarts.com/" id="submit">
+		<input type="text" value="Blur/focus events" id="blur"><br>
+		<input type="text" value="Keyboard events" id="keyboard"><br>
+	
+		<input type="submit" value="Submit event">
+		<input type="button" value="Button not submit button" id="btn">
+	</form>
+	
+<script>
+	function clickLog() {
+		console.log('hello click');
+	};
+	
+	// tradition JS binding
+	document.getElementById('click').onclick = clickLog; // named function
+	
+	window.onload = function () { // an anonymous function
+		console.log('Load event - all the HTML in the document has rendered');
+	};
+	
+	// hover (mouseOver & mouseOut)
+	document.getElementById('hover').onmouseover = function () {
+		console.log('Mouse over event');
+		this.className = 'hover'; // add class
+	};
+	document.getElementById('hover').onmouseout = function () {
+		console.log('Mouse out event');
+		this.className = ''; // remove class
+	};
+	
+	// blur/focus
+	document.getElementById('blur').onblur = function () { this.value = 'Blur'; };
+	document.getElementById('blur').onfocus = function () { this.value = 'Focus'; };
+	
+	// keyboard events
+	document.getElementById('keyboard').onkeydown = function () { console.log('Key Down'); };
+	document.getElementById('keyboard').onkeyup = function () { console.log('Key Up'); };
+	document.getElementById('keyboard').onkeypress = function () { console.log('Key Press (not triggered by arrows or Ctrl)'); };
+	
+	// Down & Press occur on repetition
+	// Press only occurs when a character is added to HTML
+	// Down supports arrows too (Chrome, Firefox also triggers Press)
+	// Up occurs on release
+	
+	// submit only works on <form> with a input submit button (will not trigger on type="button")
+	document.getElementById('submit').onsubmit = function () {
+		console.log('Submit');
+		return false; // cancels form action; prevents form submission
+	};
+
+	document.getElementById('btn').onclick = clickLog;
+</script>
+</body></html>

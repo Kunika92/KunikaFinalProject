@@ -1,0 +1,14 @@
+.balsamiqSprite {background-image:url(sprite.png); margin: 0 auto; background-repeat:no-repeat;}
+#layersJsCssHtml {width:446px;height:169px;background-position:-255px -14px;}
+#layersJsCssHtmlData {width:454px;height:199px;background-position:-247px -213px;}
+.page {width:190px; height:202px; background-position:-1px -0px;}
+.doubleTopTop {width:100px; height:40px; background-position:-5px -215px;}
+.sendTopSide {width:103px; height:47px; background-position:-0px -275px;}
+.receiveTopSide {width:103px; height:47px;background-position:-7px -325px; }
+.sendTopTop {width:104px; height:40px; background-position:-0px -383px;}
+.receiveTopTop {width:105px; height:40px; background-position:-5px -440px; }
+.sendBotBot {width:106px; height:40px; background-position:-0px -487px;}
+.halfPage {width:190px; height:100px; background-position:-366px -423px; display: }
+.page small, .halfPage small { display: table-cell; vertical-align: middle; }
+.halfPage small { width:190px; height:100px; }
+.page small { width:190px; height:100px; }

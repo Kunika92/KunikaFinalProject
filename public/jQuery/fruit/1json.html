@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Spinner</title>
+	<style>
+		#fruits li[style] { color: white; padding: 1em; margin-left: -1em; }
+		#fruits li[style]::before { content: "•"; color: black; padding-right: 1em; }
+	</style>
+</head>
+
+<body>
+	<h1>AJAX</h1>
+	<h2>Local Server via route</h2>
+
+	<h3>Goal</h3>
+	<p>As a user, I want to the fruit with a background colour from the API, and see a visual indicator when the server has slow response times.</p>
+	<p>As a dev, display the fruit as a bulleted list from our new route</p>
+	<p>Spinner should be shown in HTML and then hidden when the list appears</p>
+	
+	<h3>Technologies</h3>
+	<ul>
+		<li>jQuery</li>
+		<li>jQuery AJAX</li>
+		<li>JSON</li>
+		<li>JavaScript</li>
+		<li>node.js</li>
+	</ul>
+
+	<h3>Resources</h3>
+	<ul>
+		<li><a href="/api/slow-fruit">Local server API call</a></li>
+		<li><a href="http://ajaxload.info">Generate custom spinner</a></li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<h4>Fruits</h4>
+	<ul id="fruits">
+		<li><img src="spinner.gif" alt="List is loading"></li>
+		<li>Todo inclass</li><!-- Do not modify HTML -->
+	</ul>
+
+	<!-- Attach jQuery library -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Attach all the bundles JavaScript files in /src/js -->
+	<script src="/js/critical.js"></script>
+	<!-- Execute page specific function -->
+	<script>fruitWithSpinner();</script>
+</body>
+</html>

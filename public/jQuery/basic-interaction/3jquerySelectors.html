@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery selectors</title>
+</head>
+
+<body>
+	<h1>jQuery</h1>
+	<h2>Selectors</h2>
+	<p>CSS uses selectors to reference HTML tags (i.e. p.className). jQuery has copied CSS and uses the same CSS selectors to reference HTML tags.</p>
+
+	<h3>Goal</h3>
+	<p>Keep the appearance the same for the user. We will convert the CSS to jQuery. Both CSS selectors and CSS rules work in jQuery with different syntax.</p>
+
+	<h3>Technologies</h3>
+	<ol>
+		<li>jQuery</li>
+		<li>JavaScript</li>
+		<li>CSS</li>
+	</ol>
+
+	<h3>Resource</h3>
+	<ul>
+		<li><a href="http://api.jquery.com/css/">CSS method</a></li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<ol id="demo">
+		<li>This first bullet should be bold/strong</li>
+		<li class="red twenty">Red 20pt font with a dotted underline</li>
+		<li class="blue twenty">Blue 20pt font</li>
+		<li class="twenty">Normal 20pt font</li>
+		<li class="twenty red">Red 20pt font with a dotted underline</li>
+		<li class="red">Red text</li>
+	</ol>
+	<p><b>Todo <span class="blue">inclass</span>: Create CSS rules so each bullet is styled.</b></p>
+	<p>Notice there is no <span class="blue">bold</span> HTML element in this example.</p>
+
+	<p>Sample jQuery syntax: $(selector).method('CSS rule', 'CSS value');</p>
+	<code>$('.red').css('color', 'red');</code>
+
+	<!-- Attach jQuery library -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Page specific code -->
+	<script>
+		// SOLUTION
+		// CSS #demo li:first-child { font-weight: bold; }
+		// $('#demo li:first-child').css('font-weight', 'bold'); // recommended
+		// $('#demo li:first-child').css({ 'font-weight': 'bold' }); // too much syntax
+		document.querySelector('#demo li:first-child').style.fontWeight = 'bold'; // camelCase
+
+		// CSS .red { color: red; }
+		// $('.red').css('color', 'red');
+		Array.from(document.querySelectorAll('.red')).forEach((tag) => {
+			tag.style.color = 'red';
+		});
+
+		// CSS .twenty { font-size: 20pt; }
+		// $('.twenty').css('font-size', '20pt');
+		Array.from(document.querySelectorAll('.twenty')).forEach((tag) => {
+			tag.style.fontSize = '20pt';
+		});
+		
+		// CSS .blue { color: blue; }
+		// $('.blue').css('color', 'blue');
+		Array.from(document.querySelectorAll('.blue')).forEach((tag) => {
+			tag.style.color = 'blue';
+		});
+
+		// CSS .red.twenty { border-bottom-width: 1px; border-bottom-style: dotted; }
+		// not ideal due to duplicated selector that causes the browser to scan through our HTML elements twice
+		// $('.red.twenty').css('border-bottom-width', '1px');
+		// $('.red.twenty').css('border-bottom-style', 'dotted');
+
+		// jQuery css method accepts an object of CSS rules
+		// $('.red.twenty').css({
+		// 	'border-bottom-width': '1px',
+		// 	'border-bottom-style': 'dotted'
+		// });
+
+		// jQuery chaining may occur after a selector
+		// $('.red.twenty')
+		// 	.css('border-bottom-width', '1px')
+		// 	.css('border-bottom-style', 'dotted');
+
+		// CSS shorthand
+		// $('.red.twenty').css('border-bottom', '1px dotted red');
+
+		Array.from(document.querySelectorAll('.red.twenty')).forEach((tag) => {
+			tag.style.borderBottom = '1px dotted red';
+		});
+	</script>
+	
+</body>
+</html>

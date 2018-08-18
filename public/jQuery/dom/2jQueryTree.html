@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery DOM tree</title>
+	<style>
+		.rule1 { font-style: italic; }
+		.rule2 { background-color: yellow; }
+		.rule3 { color: red; }
+		.rule4 { text-decoration: underline; }
+	</style>
+</head>
+<body>
+
+<h1>DOM</h1>
+<h2>Document Object Model</h2>
+
+<p>HTML or XML represented as an object with elements broken down into tags, text, and attributes.</p>
+
+<h3>Technology</h3>
+<ul>
+	<li>jQuery</li>
+	<li>JavaScript</li>
+	<li>CSS</li>
+	<li>HTML</li>
+</ul>
+
+<h3>Resources</h3>
+<ul>
+	<li>jQuery Documentation <a href="http://api.jquery.com/category/traversing/tree-traversal/">Tree traversal</a></li>
+	<li>Wikipedia <a href="https://en.wikipedia.org/wiki/Document_Object_Model">Document Object Model</a></li>
+	<li>Mozilla MDN <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Intro to DOM</a></li>
+</ul>
+
+<h3>Goal</h3>
+<p>Remove the class names from the HTML structure, then using jQuery to traverse the DOM and apply the class names to acheive the same styling.</p>
+ 
+<!-- Ancestors (upwards) -->
+<ul>
+	<li>Great grandparent
+	<ul>
+		<li>Grandparent
+		<ul>
+			<li>Parent 
+			<ul>
+				<li id="here">Tree structure relative to here
+				<ul><li>Child</li><li>Children</li></ul> <!-- Descendant (downwards) -->
+				</li>
+				<li>Sibling</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<h3>Rules</h3>
+<ol>
+	<li>Apply italic to parent</li>
+	<li>Apply yellow to the grandparent's background</li>
+	<li>Apply red to the child's text</li>
+	<li>Apply underline to the sibling</li>
+</ol>
+
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Page specific code -->
+<script>
+	var $here = $('#here');
+	$here.parent().parent().attr('class', 'rule1');
+	// $here.parents('li:first').addClass('rule1'); // preferred over above
+	$here.parents('li:first').parents('li:first').addClass('rule2');
+	$here.find('li:first').addClass('rule3');
+	// $here.find('li').first().addClass('rule3');
+	$here.next().addClass('rule4');
+	
+	// Chaining is more complex, harder to debug, but better performance
+	// $('#here')
+	// 	.parent()
+	// 	.parent()
+	// 	.attr('class', 'rule1')
+	// 	.parents('li:first')
+	// 	.addClass('rule2') // shorthand for .attr('class', 'rule2')
+	// 	.end() // doc http://api.jquery.com/end/
+	// 	.end() // up to 2nd parent call
+	// 	.end() // up to #here
+	// 	.find('li:first')
+	// 	.addClass('rule3')
+	// 	.end() // down to #here
+	// 	.next()
+	// 	.addClass('rule4');
+</script>
+
+</body></html>

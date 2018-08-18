@@ -1,0 +1,26 @@
+{>"layout-slide"/}
+
+{<body}
+	<section>
+		<h1>CDN</h1>
+		<h2>Content Delivery Network</h2>
+	</section>
+
+	<section>
+		<h2>Benefits</h2>
+		<ul>
+			<li>Regional distribution - Hosted geographically closer to request</li>
+			<li>Gzip compressed - smaller filesize</li>
+			<li>Browser cache - after the first viewing</li>
+			<li>Cookieless domain - no bloat</li>
+			<li>Versioning - historic assets</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Resources</h2>
+		<ul>
+			<li>NCZOnline <a href="http://www.nczonline.net/blog/2011/11/29/how-content-delivery-networks-cdns-work/">How content delivery networks (CDNs) work</a></li>
+		</ul>
+	</section>
+{/body}

@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Basic API map</title>
+</head>
+
+<body>
+  <h1>Slippy Map</h1>
+  <h2>Basic Map</h2>
+
+  <h3>Goal</h3>
+  <ol>
+    <li>
+      <ul>
+        <li>As a user, I want to see my business on the map.</li>
+        <li>As a dev, using a map API add a marker or pin on the slippy map.</li>
+      </ul>
+    </li>
+    <li>
+      <ul>
+        <li>As a user, I want to see my business on the map and display our logo when pin is clicked.</li>
+        <li>As a dev, using a map API add a marker or pin on the slippy map. The pin's infobubble will contain the image HTML element.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h3>Technologies</h3>
+  <ul>
+    <li>Google Maps JS API v3</li>
+    <li>JavaScript</li>
+    <li>CSS</li>
+    <li>HTML</li>
+  </ul>
+
+	<h3>Live demo</h3>
+	<div id="map" style="height: 400px;"></div>
+	
+	<!-- Attach all the bundles JavaScript files in /src/js -->
+	<script src="/js/critical.js"></script>
+	<!-- Attach Google Maps JS v3 -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAwP120TZQId__tHUCaPe2zMWuzcOoETW0&callback=initMap"
+    async defer></script>
+</body>
+</html>

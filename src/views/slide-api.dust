@@ -1,0 +1,88 @@
+{>"layout-slide"/}
+
+	{<body}
+<link rel="stylesheet" href="../assets/sprite.css" />
+
+<section>
+<h1>API</h1>
+<h3>Application Programming Interface</h3>
+</section>
+
+<section>
+<h2>Static content</h2>
+<div id="layersJsCssHtml" class="balsamiqSprite"></div>
+</section>
+
+<section>
+<h2>Dynamic content</h2>
+<div id="layersJsCssHtmlData" class="balsamiqSprite"></div>
+</section>
+
+<section>
+<h2>Basic website</h2>
+<img src="../assets/api_web1.jpg">
+</section>
+
+<section>
+<h2>Web 2.0</h2>
+<img src="../assets/api_web2.jpg">
+</section>
+
+<section>
+<h2>Web 2.0 with an API</h2>
+<img src="../assets/api_web2_api.jpg">
+</section>
+
+<section>
+<h3>Your website is an island</h3>
+<img src="../assets/api_islands.jpg">
+</section>
+
+<section>
+<h3>Your website as a true network</h3>
+<img src="../assets/api_mashup.jpg">
+</section>
+
+<section>
+<h1>Mashup</h1>
+<h2>Remixed data</h2>
+<p>A mashup is a web site or web application that combines content from more than one source into an integrated experience.</p>
+</section>
+
+<section>
+<h2>Mashup Content</h2>
+<p>Content used in a mashup is typically via an API or web feed.</p>
+</section>
+
+<section>
+<h2>Mapping mashup</h2>
+<div style="margin: 0 auto; width: 550px;">
+	<div style="width: 350px; float: left">
+		<div class="balsamiqSprite halfPage" style="display: inline-block;"><small><a href="http://vancouver.en.craigslist.ca/">craigslist.com</a></small></div>
+		<div class="balsamiqSprite sendTopTop" style="display: inline-block;"></div>
+		<div class="balsamiqSprite halfPage" style="display: inline-block;"><small><a href="http://maps.google.ca/">maps.google.ca</a></small></div>
+		<div class="balsamiqSprite sendBotBot" style="display: inline-block;"></div>
+	</div>
+	<div style="float: left; margin-top: 80px; width: 200px;">
+		<!-- http://livelovely.com/ -->
+		<div class="balsamiqSprite halfPage"><small><a href="http://www.padmapper.com/">padmapper.com/</a></small></div>
+	</div>
+</div>
+</section>
+
+<section>
+<h2>Social mashup</h2>
+<div style="margin: 0 auto; width: 550px;">
+	<div style="width: 350px; float: left">
+		<div class="balsamiqSprite halfPage" style="display: inline-block;"><small><a href="http://www.twitter.com/">twitter.com</a></small></div>
+		<div class="balsamiqSprite sendTopTop" style="display: inline-block;"></div>
+		<div class="balsamiqSprite halfPage" style="display: inline-block;"><small><a href="http://www.flickr.com/">flickr.com</a></small></div>
+		<div class="balsamiqSprite sendBotBot" style="display: inline-block;"></div>
+	</div>
+	<div style="float: left; margin-top: 80px; width: 200px;">
+		<!-- http://livelovely.com/ -->
+		<div class="balsamiqSprite halfPage"><small><a href="http://infinitecomic.com/index.php?form=create&terms=seabus">infinitecomic.com</a></small></div>
+	</div>
+</div>
+</section>
+	{/body}

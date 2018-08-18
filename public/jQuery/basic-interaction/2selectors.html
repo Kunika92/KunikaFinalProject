@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CSS selectors</title>
+	<style>
+		/* CSS selector is outside the braces */
+		/* CSS rule is inside the braces */
+		
+		#demo li:first-child { font-weight: bold; } /* bullet 1 */
+		/* :first-child is a puesdo selector */
+		.red { color: red; } /* bullet 2 + 5 + 6 */
+		.twenty { font-size: 20pt; } /* bullet 2 - 5 */
+		.red.twenty { /* bullet 2 + 5 */
+			border-bottom-width: 1px;
+			border-bottom-style: dotted;
+		}
+		/* looking at the HTML class name, red space twenty and twenty space red are
+		both matched by this selector */
+		
+		.blue { color: blue; } /* bullet 3 */
+	</style>
+</head>
+
+<body>
+	<h1>jQuery</h1>
+	<h2>Selectors</h2>
+	<p>CSS uses selectors to reference HTML tags (i.e. p.className). jQuery has copied CSS and uses the same CSS selectors to reference HTML tags.</p>
+	
+	<h3>Technologies</h3>
+	<ul>
+		<li>CSS</li>
+	</ul>
+	
+	<h3>Live demo</h3>
+	<ol id="demo">
+		<li>This first bullet should be bold/strong</li>
+		<li class="red twenty">Red 20pt font with a dotted underline</li>
+		<li class="blue twenty">Blue 20pt font</li>
+		<li class="twenty">Normal 20pt font</li>
+		<li class="twenty red">Red 20pt font with a dotted underline</li>
+		<li class="red">Red text</li>
+	</ol>
+	<p><b>Todo <span class="blue">inclass</span>: Create CSS rules so each bullet is styled.</b></p>
+	<p>Notice there is no <span class="blue">bold</span> HTML element in this example.</p>
+</body>
+</html>

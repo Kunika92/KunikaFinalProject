@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>npm</title>
+</head>
+
+<body>
+	<h1>NPM</h1>
+  <h2>Node Package Manager</h2>
+
+  <p><i>npm install</i> look for dependencies in package.json and install when missing</p>
+
+  <p><i>npm update</i> look for dependencies in package.json but it will get the latest</p>
+
+	<p><i>npm outdated</i> compare currently installed modules with latest</p>
+	
+  <p>node_modules folder stores all the open-source dependencies</p>
+
+  <h2>Setup</h2>
+  <ol>
+    <li>Create a new folder <code>api-visualizer</code> in <b>course-files/src</b></li>
+    <li>Create <b>package.json</b> <code>npm init</code> will setup your package.json with a step-by-step wizard</li>
+    <li><i>version</i> &lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;. The difference between <b>major</b> versions is a breaking change. Meaning the developer will likely be required to change their code to use the new version. <b>Minor</b> version is safe to consume as there are no breaking changes, likely new features are added. For example the current version of jQuery is v2.1.4, when v2.2.0 is released we can all upgrade to this version without changing our code. Though we should test our web pages to ensure functionality. <b>Patch</b> version will contain bug fixes and security updates. <a href="http://semver.org/">semver (Semantic Versioning)</a></li>
+    <li><a href="http://choosealicense.com/">Choose a license</a></li>
+  </ol>
+
+  <h2>Package Managers</h2>
+  <ul>
+		<li>Node.js <a href="https://www.npmjs.com/">npm</a></li>
+		<li>Node.js <a href="https://yarnpkg.com/en/">yarn</a></li>
+    <li>Node.js keyword search for packages <a href="https://npms.io/">npms</a></li>
+    <li>Browser JavaScript <a href="http://www.bower.io/">Bower</a></li>
+    <li>ASP.NET <a href="https://www.nuget.org/">NuGet</a></li>
+    <li>Ruby <a href="https://rubygems.org/">Gems</a></li>
+    <li>PHP <a href="https://packagist.org/">Packagist</a></li>
+  </ul>
+</body>
+</html>

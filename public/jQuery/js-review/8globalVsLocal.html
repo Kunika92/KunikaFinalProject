@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Local Vs Global</title>
+</head>
+
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>Variable scope</h2>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<script>
+		// Local variables live inside a function
+		// Global variables live on the window object or outside of a function
+		// Scope is the life span of a variable
+		var degree = 30; // global; window.degree === degree; window.degree = 30;
+		window.teacherName = 'Dan'; // global
+		// global.teacherName = 'Dan'; // global Node.js variable
+		// var teacherName = 'Dan'; // global
+
+		function getTemp(tempType) { // type is local
+			var city = 'Vancouver'; // local
+			window.day = 'Wednesday'; // set a global variable inside a function
+			window.alert('The temp in ' + city + ' is ' + degree + tempType);
+
+			window.teacherName = window.teacherName + ' BROOKS'; // global
+		};
+
+		getTemp('C');
+		window.alert(window.teacherName);
+	</script>
+</body>
+</html>

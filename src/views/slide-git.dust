@@ -1,0 +1,79 @@
+{>"layout-slide"/}
+
+{<body}
+<section>
+<h1>Git</h1>
+<h3>a distributed version control system</h3>
+</section>
+
+<section>
+<h2>What is a Version Control system?</h2>
+<p>Manual backups of incrementally different versions</p>
+<p>Similar to these other approaches</p>
+<ul>
+	<li>history in Photoshop</li>
+	<li>unlimited Undos</li>
+	<li>Apple Time Capsule</li>
+</ul>
+</section>
+
+<section>
+<h2>Reasons to backup</h2>
+<ul>
+	<li>Retrieve historic work</li>
+	<li>Share code</li>
+	<li>Experiment</li>
+	<li>Understand past changes</li>
+</ul>
+</section>
+
+<section>
+<h2>Code Portfolio</h2>
+<p>Git is a creation of the programming superstar, <a href="https://en.wikipedia.org/wiki/Linus_Torvalds">Linus Torvalds</a>.</p>
+<p><a href="https://github.com/">GitHub</a> is the most popular host of git.</p>
+<p>Showcase your programming skills with the GitHub community.</p>
+</section>
+
+<section>
+<img src="../assets/git_basic_diffs.png">
+<p><small><small>(source <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">A Visual Guide to Version Control | BetterExplained</a>)</small></small></p>
+</section>
+
+<section>
+<p><small>Git thinks of its data more like a set of snapshots of a mini filesystem</small></p>
+<img src="../assets/git_snapshots.png">
+<p><small><small>(source <a href="http://git-scm.com/book/en/Getting-Started-Git-Basics">Git Basics</a>)</small></small></p>
+</section>
+
+<section>
+<h3>The lifecycle of the status of your files</h3>
+<ul>
+	<li><small>Modified: you changed file(s) but have not committed.</small></li>
+	<li><small>Staged: marked file(s) will go into your next commit snapshot.</small></li>
+	<li><small>Committed: data is safely stored in your local repository.</small></li>
+</ul>
+<img src="../assets/git_basic_lifecycles.png">
+<p><small><a href="http://git-scm.com/book/en/Getting-Started-Git-Basics">Git Basics</a></small></p>
+</section>
+
+<section>
+<h2>15 minute interactive course</h2>
+<p>Code School <a href="http://www.codeschool.com/courses/try-git">Try Git</a></p>
+</section>
+
+<section>
+<h2>Resources</h2>
+<p>Browser extension to convert GitHub HTML source to a web page <a href="https://github.com/ryt/githtml">ryt/githtml</a></p>
+</section>
+
+<section data-markdown><script type="text/template">
+	* [Seth Robertson](http://sethrobertson.github.io/) Troubleshoot merge
+	* [stackoverflow](http://stackoverflow.com/questions/2621610/what-git-branching-models-actually-work) Braching approaches
+</script></section>
+
+<section>
+<p><small> The lifecycle of the status of your files.</small></p>
+<img src="../assets/git_offline_lifecycle.png">
+<p><small><a href="http://git-scm.com/book/en/Git-Basics-Recording-Changes-to-the-Repository">Git Basics</a></small></p>
+</section>
+	{/body}

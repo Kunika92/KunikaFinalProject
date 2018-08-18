@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sales tax</title>
+	<style>
+		label { cursor: pointer; }
+		.error { border: 2px solid red; background-color: pink; }
+	</style>
+</head>
+
+<body>
+	<h1>JSON</h1>
+	<h2>Homework assignment</h2>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>JSON</li>
+		<li>JavaScript</li>
+		<li>jQuery</li>
+	</ul>
+
+	<h3>User story</h3>
+	<p>As a user, I want to calculate my cost (final price) of a pizza lunch by entering the retail price and selecting my province.</p>
+
+	<h3>Steps</h3>
+	<ol>
+		<li>As a developer, I want to log every province name (not abbreviated)</li>
+		<li>
+			<ul>
+				<li>As a developer, I want the DOM to display every province name (not abbreviated)</li>
+				<li>As a user, I want to select my province from a dropdown list.</li>
+			</ul>
+		</li>
+		<li>As a developer, when a province is selected I want to console.log the sales tax</li>
+		<li>As a user, I want to input the pizza price to learn the cost based on my province</li>
+		<li>As a user, I want to input the pizza price to learn the cost based on my province and display as currency.</li>
+	</ol>
+
+	<h3>Resource</h3>
+	<ul>
+		<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.map</a></a></li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<section>
+		<select id="provinces">
+			<option value="">Choose your province</option>
+		</select>
+		<label>Pizza price <input type="number" id="price" min="0" step="any" required="required" ></label>
+		<span id="pizzaCost"></span>
+	</section>
+
+	<!-- Attach jQuery library -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Attach all the bundles JavaScript files in /src/js -->
+	<script src="/js/critical.js"></script>
+	<!-- Execute page specific function -->
+	<script>pizzaSales();</script>
+</body>
+</html>

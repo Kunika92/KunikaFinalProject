@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>get XML from local server</title>
+</head>
+
+<body>
+	<h3>Goal</h3>
+	<ol>
+		<li>Output the fruit using AJAX to get XML from the local app server (Node.js)</li>
+		<li>Each bullet should have a background colour to highlight the matching fruit</li>
+	</ol>
+
+	<p>As a user, I want to see a list of fruit names with colourful backgrounds.</p>
+
+	<h3>Developer steps</h3>
+	<ol>
+		<li>Verify datasource</li>
+		<li>Design layout</li>
+		<li>Create scaffolding (supporting files such as filename?, folder?)</li>
+		<li>Add external scripts (jQuery, critical)</li>
+		<li>AJAX call</li>
+	</ol>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>jQuery</li>
+		<li>jQuery AJAX</li>
+		<li>XML</li>
+		<li>JavaScript</li>
+		<li>node.js</li>
+	</ul>
+
+	<h3>Live demo</h3>
+	<ul id="fruits"></ul>
+
+	<!-- Attach jQuery library -->
+	<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<!-- Attach all the bundles JavaScript files in /src/js -->
+	<script src="/js/critical.js"></script>
+	<!-- Execute page specific function -->
+	<script>fruitXml();</script>
+</body>
+</html>

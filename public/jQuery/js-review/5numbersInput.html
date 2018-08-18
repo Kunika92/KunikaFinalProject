@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Number Input</title>
+</head>
+
+<body>
+	<h1>JavaScript Intro</h1>
+	<h2>Number</h2>
+
+	<h3>Goal</h3>
+	<p>As a user, I want to order some pizza.</p>
+
+	<h3>Technologies</h3>
+	<ul>
+		<li>JavaScript</li>
+	</ul>
+
+	<h3>Live demo</h3>
+	Pizza(s) <input type="text" id="count" value="2"><br>
+	<select id="size">
+		<option value="9">Small</option>
+		<option value="12" selected="selected">Medium</option>
+		<option value="20">Large</option>
+	</select>
+	<script>
+		// todo inclass: apply GST + PST 7% to total bill, and round down to the nearest dollar
+		var count = parseInt(document.getElementById('count').value, 10);
+		var size = parseFloat(document.getElementById('size').value);
+		window.alert('Subtotal $' + (count * size));
+
+		// SOLUTION
+		var subtotal = count * size;
+		var gst = 0.05;
+		window.alert('Total $' + subtotal * (1 + gst)); // $25.20000000000000000003
+		window.alert('Total with GST $' + Math.ceil(subtotal * (1 + gst))); // $26
+
+		var pst = 0.07;
+		var totalWithTaxes = Math.floor(subtotal * (1 + (pst + gst)));
+		window.alert('Total with GST + PST $' + totalWithTaxes); // $26
+	</script>
+</body>
+</html>

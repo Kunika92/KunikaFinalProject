@@ -1,0 +1,15 @@
+{>"layout-slide"/}
+
+	{<body}
+<section>
+<h1>Flickr</h1>
+<h3>Photo hosting</h3>
+</section>
+
+<section>
+<ul>
+	<li><a href="https://www.flickr.com/services/feeds/">Web Feed</a></li>
+	<li><a href="https://www.flickr.com/services/api/">API Reference</a></li>
+</ul>
+</section>
+	{/body}

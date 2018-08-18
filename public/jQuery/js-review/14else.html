@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>else</title>
+</head>
+<body>
+<h1>JavaScript Intro</h1>
+<h2>Else condition</h2>
+
+<h3>Goal</h3>
+<p>Support multiple logical paths with conditional else statements</p>
+
+<h3>Technologies</h3>
+<ul>
+	<li>JavaScript</li>
+</ul>
+
+<h3>Live demo</h3>
+	<script>
+		var today; // assign a value of string mon
+	
+		/* operators
+		|| or (pipe pipe)
+		&& and (ampersand ampersand)
+		!== strict not equal
+		=== strict equal
+		*/
+		
+		if (today === 'sat' || today === 'sun') {
+			console.log('weekend');
+		} else if (today === undefined) {
+			console.log('no value');
+		} else {
+			console.log('weekday');
+		}
+
+		// todo inclass: Modify `today` variable on line 21
+		// so the console will display 'no value'
+		// SOLUTION
+		// else if (today === undefined || today === null || today === '')
+		// var today = ''; //  failure as assigning a value of blank
+		// var today = null; // failure as assigning a value of nothing
+		// var today = undefined; // success
+		// var today; // success
+</script>
+ 
+</body></html>

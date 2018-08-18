@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Film - Cowboy</title>
+</head>
+
+<body>
+<h1>Homework</h1>
+<h2>Assignment</h2>
+
+<h3>Goal</h3>
+<p>As a user, I want to see all the characters in <i>Cowboys and Aliens</i> in a dropdown menu, after selecting a character I want to see the actor's name</p>
+
+<h3>Technologies</h3>
+<ul>
+	<li>jQuery AJAX</li>
+	<li>JSON</li>
+	<li>jQuery</li>
+	<li>JavaScript</li>
+</ul>
+
+<h3>Resources</h3>
+<ul>
+	<li><a href="https://www.rottentomatoes.com/m/cowboys_and_aliens">Cowboys and Aliens on Rotton Tomatoes</a></li>
+</ul>
+
+<h3>Terms</h3>
+<ul>
+	<li>Film is the motion picture of <i>Cowboys and Aliens</i></li>
+	<li>Actors are the humans seen in this film</li>
+	<li>Characters are the fictional personas played by actors in this film</li>
+</ul>
+
+<h3>Expectation</h3>
+<ul>
+	<li>The Live Demo section contains a form dropdown menu with Character options.
+		When a Character is selected then additional text is displayed with the associated Actor.</li>
+	<li>
+		When selecting another option in the drowdown menu the Actor output should update and associate with the dropdown selection.
+		<ul>
+			<li>When no character is selected then no actor should be shown.</li>
+		</ul>
+	</li>
+	<li><a href="film-characters_diagram.jpg"><img src="film-characters_diagram.jpg" width="240" height="180"></a></li>
+	<!--Hint: There is a <i>change</i> event that can monitor the dropdown without a button OR just use a button.-->
+	<li>Airbnb team standard has no lint errors</li>
+</ul>
+
+<h3>Meta</h3>
+<ul>
+	<li>Due next class May 2nd 2018</li>
+	<li>Assement weight 12 (<a href="https://github.com/VanArts/course-files/blob/master/public/jQuery/README.md#assessment">What does this mean?</a>)</li>
+</ul>
+
+<h3>Live demo</h3>
+<div>
+	Characters
+		<select id="characters">
+			<option value="">Choose a character</option>
+		</select>
+		<span id="actor"></span>
+</div>
+<!-- Attach jQuery library -->
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Attach all the bundles JavaScript files in /src/js -->
+<script src="/js/critical.js"></script>
+<!-- Execute page specific function -->
+<script>
+cowboyHomework();
+</script>
+
+</body>
+</html>
