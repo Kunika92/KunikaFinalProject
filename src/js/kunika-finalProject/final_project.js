@@ -1,13 +1,11 @@
 /* global fetch document alert window jQuery XMLHttpRequest FileReader */
-/* eslint quote-props: ["error", "as-needed"] */
-/* eslint object-shorthand: [2, "consistent-as-needed"] */
-/* eslint-env es6 */
 
 function toggleSpinner() {
   $('#spinner').toggleClass('hide');
 }
 
 function processImage(imgUrl, id) {
+  // toggleSpinner();
   const subscriptionKey = 'e3642d97f2754c9eb5f16dbcd082d943';
   const uriBase = 'https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze';
 
@@ -26,7 +24,7 @@ function processImage(imgUrl, id) {
     url: `${uriBase}?${$.param(params)}`,
 
     // Request headers.
-    beforeSend: function (xhrObj) {
+    beforeSend: (xhrObj) => {
       xhrObj.setRequestHeader('Content-Type', 'application/json');
       xhrObj.setRequestHeader('Ocp-Apim-Subscription-Key', subscriptionKey);
     },
@@ -38,7 +36,6 @@ function processImage(imgUrl, id) {
   })
 
     .done((data) => {
-
     // Show formatted JSON on webpage.
       const dataArr = [];
       for (let index = 0; index < 3; index += 1) {
@@ -46,6 +43,7 @@ function processImage(imgUrl, id) {
           dataArr.push(`#${data.tags[index].name}`);
         }
       }
+
       $(`#imageDiv${id}`).find('textarea').val(jQuery.parseJSON(JSON.stringify(dataArr, null, 4)));
     })
 
@@ -72,7 +70,6 @@ function generateThumbnail(imgUrl, id) {
   // Create the HTTP Request object.
   const xhr = new XMLHttpRequest();
 
-  toggleSpinner();
   // Identify the request as a POST, with the URL and parameters.
   xhr.open('POST', uriBase + params);
 
@@ -89,10 +86,9 @@ function generateThumbnail(imgUrl, id) {
       // Thumbnail successfully created.
       if (xhr.status === 200) {
         // Show thumbnail image.
-        // console.log(response);
         const urlCreator = window.URL || window.webkitURL;
         const imageUrl = urlCreator.createObjectURL(this.response);
-        // console.log(imageUrl);
+
         document.querySelector(`#thumbnailImage${id}`).src = imageUrl;
       } else {
         const reader = new FileReader();
@@ -101,7 +97,7 @@ function generateThumbnail(imgUrl, id) {
       }
     }
   };
-
+  toggleSpinner();
   // Make the REST API call.
   xhr.send(`{'url': '${sourceImageUrl}'}`);
 }
@@ -118,9 +114,7 @@ async function getImages(fields) {
       <img id='thumbnailImage${i}' />
       <textarea ></textarea>
     </div>`);
-    toggleSpinner();
     setTimeout(generateThumbnail(element, i), 5000);
-    toggleSpinner();
     setTimeout(processImage(element, i), 4000);
   }
   $('#gallery >div').remove();
@@ -147,7 +141,6 @@ function getFlickrPublicImages() {
   $('#location_form').on('submit', (event) => {
     $('.project').css({ display: 'none' });
     const fields = toJSON(document.getElementsByTagName('form')[0]);
-    console.log(fields);
     if (fields.lat !== '' && fields.lon !== '') {
       toggleSpinner();
       getImages(fields);
