@@ -5,7 +5,6 @@ function toggleSpinner() {
 }
 
 function processImage(imgUrl, id) {
-  // toggleSpinner();
   const subscriptionKey = 'e3642d97f2754c9eb5f16dbcd082d943';
   const uriBase = 'https://westcentralus.api.cognitive.microsoft.com/vision/v1.0/analyze';
 
@@ -107,19 +106,23 @@ async function getImages(fields) {
   const payload = await response.json();
 
   const html = [];
-
-  for (let i = 0; i < 10; i += 1) {
-    const element = payload.paths[i];
-    html.push(`<div id='imageDiv${i}' class='col-sm-12 col-md-3'>
-      <img id='thumbnailImage${i}' />
-      <textarea ></textarea>
-    </div>`);
-    setTimeout(generateThumbnail(element, i), 5000);
-    setTimeout(processImage(element, i), 4000);
+  if (payload.paths.length !== 0) {
+    for (let i = 0; i < 10; i += 1) {
+      const element = payload.paths[i];
+      html.push(`<div id='imageDiv${i}' class='col-sm-12 col-md-3'>
+        <img id='thumbnailImage${i}' />
+        <textarea ></textarea>
+      </div>`);
+      setTimeout(generateThumbnail(element, i), 5000);
+      setTimeout(processImage(element, i), 4000);
+    }
+    $('#gallery >div').remove();
+    $('#error').text('');
+    $('#gallery').append(html.join(''));
+  } else {
+    $('#error').text('Please enter valid location coordinates!');
   }
-  $('#gallery >div').remove();
   toggleSpinner();
-  $('#gallery').append(html.join(''));
 }
 
 // Serialize HTML Form to JSON
@@ -145,7 +148,7 @@ function getFlickrPublicImages() {
       toggleSpinner();
       getImages(fields);
     } else {
-      alert('Please enter coordinates!');
+      $('#error').text('Please enter coordinates!');
     }
     event.preventDefault(); // cancel form action
   });
